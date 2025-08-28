@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://c8yvbvnq7ygxj"]
+
+[node name="TouchControls" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="LeftControl" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="JumpButton" type="TouchScreenButton" parent="MarginContainer/HBoxContainer/LeftControl"]
+position = Vector2(50, -100)
+scale = Vector2(1.5, 1.5)
+action = "jump"
+visibility_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/LeftControl/JumpButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 0.392157)
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/LeftControl/JumpButton/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "跳跃"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightControl" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CrouchButton" type="TouchScreenButton" parent="MarginContainer/HBoxContainer/RightControl"]
+position = Vector2(50, -100)
+scale = Vector2(1.5, 1.5)
+action = "down"
+visibility_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/RightControl/CrouchButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 0.392157)
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/RightControl/CrouchButton/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "下蹲"
+horizontal_alignment = 1
+vertical_alignment = 1
